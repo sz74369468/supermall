@@ -81,7 +81,7 @@ export function request(config) {
     // console.log(res);
     // res.data
     return res.data
-  },err => {
+  }, err => {
     console.log(err);
   });
 

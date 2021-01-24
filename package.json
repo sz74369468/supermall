@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "serve": "vue-cli-service serve --open",
+    "build": "vue-cli-service build",
+    "lint": "eslint --ext .js,.vue src",
+    "lintfix": "eslint --ext .js,.vue src --fix"
   },
   "dependencies": {
     "axios": "^0.21.1",
