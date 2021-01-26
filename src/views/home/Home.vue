@@ -79,6 +79,17 @@
       this.getHomeGoods('sell')
 
     },
+    destroyed() {
+      console.log('home被销毁');
+    },
+    activated() {
+      this.$refs.scroll.scrollTo(0, this.savaY, 0)
+      this.$refs.scroll.refresh()
+    },
+    deactivated() {
+      this.savaY = this.$refs.scroll.getScrollY()
+      console.log(this.savaY);
+    },
     mounted() {
       // 1.监听item中图片加载完成
       const refresh = debounce(this.$refs.scroll.refresh, 200)
